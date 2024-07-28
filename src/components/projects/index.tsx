@@ -49,12 +49,12 @@ function Projects()
         <>
         <div className="w-full pl-10 pr-10 flex flex-col items-center justify-center mt-12">
             
-            <h3 className="text-2xl">PROJETOS</h3>
+            <h3 className="text-2xl dark:text-white">PROJETOS</h3>
 
             <div className="w-full flex flex-col gap-5 mt-10">
                 {projects.map((itens, index) => (
-                    <animated.div style={{opacity: scrollXProgress}} key={index} className="w-full bg-slate-100 p-4 rounded">
-                        <div className="w-full flex flex-col items-center justify-center">
+                    <animated.div style={{opacity: scrollXProgress}} key={index} className="w-full  p-4 rounded">
+                        <div className="w-full flex flex-col items-center justify-center dark:text-white">
                         <h3 className="font-bold">{itens.title}</h3>
                         <p>{itens.description}</p>
                         </div>

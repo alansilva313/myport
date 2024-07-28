@@ -23,7 +23,8 @@ function Aside(){
            <h3 className="text-4xl leading-tight"><strong className='text-[15px] text-start'>Olá, sou</strong>
              <animated.div style={spring}>Alan Silva <button className="bg-blue-600 pl-4 pr-4 text-[22px] rounded">DEV FULLSTACK</button></animated.div></h3>
              <animated.div style={spring2} className="mt-4">
-             <p className='leading-relaxed '>Mais de 3 anos de experiência em desenvolvimento web, contruindo aplicações de forma rapida e bem estruturada!</p>
+             <p className='leading-relaxed '>Mais de 3 anos de
+                 experiência em desenvolvimento web, construindo aplicações de forma rapida e bem estruturada!</p>
              </animated.div>
            </div>
         

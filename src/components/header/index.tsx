@@ -1,7 +1,14 @@
 
+import { useContext } from "react";
 import { MdMenu } from "react-icons/md";
+import { ThemeContext } from "../../contexts/theme";
 
 function Header(){
+
+     const { isDarkTheme, toggleTheme }: any = useContext(ThemeContext);
+    const alterTheme = () => {
+        toggleTheme(true)
+    }
     
     return (
         <>
@@ -27,7 +34,8 @@ function Header(){
                 </ul>
             </nav>
 
-            <div className="flex sm:flex lg:hidden md:hidden">
+            <div className="flex items-center gap-2 sm:flex lg:hidden md:hidden">
+             <p onClick={alterTheme}>{isDarkTheme === true ? "light" : "Dark"}</p>
             <MdMenu className="text-3xl cursor-pointer hover:text-slate-400"/>
             </div>
          </div>

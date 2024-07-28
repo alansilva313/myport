@@ -1,15 +1,23 @@
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { MdMenu } from "react-icons/md";
 import { ThemeContext } from "../../contexts/theme";
 import { CiSun } from "react-icons/ci";
 import { LuMoonStar } from "react-icons/lu";
 function Header(){
 
+     const [showMenu, setShowMenu]: any = useState('flex')
      const { isDarkTheme, toggleTheme }: any = useContext(ThemeContext);
     const alterTheme = () => {
         toggleTheme(true)
     }
+
+
+    const menu = document.getElementById('menu');
+
+    menu?.addEventListener('click', () => {
+        setShowMenu(showMenu === "hidden" ? "flex" : "hidden");
+    })
     
     return (
         <>
@@ -37,9 +45,28 @@ function Header(){
                 </ul>
             </nav>
 
-            <div className="flex items-center gap-2 sm:flex lg:hidden md:hidden">
+            <div className="flex items-center gap-2 sm:flex lg:hidden md:hidden" id="menu">
             
             <MdMenu className="text-3xl cursor-pointer hover:text-slate-400"/>
+            </div>
+
+            <div className={`${showMenu} p-4 rounded absolute w-[150px] right-2 top-16 h-[300px] bg-white`}>
+            <nav className="flex  text-black">
+            
+            <ul className="flex flex-col items-start gap-2">
+                <a href="">
+                    <li>Home</li>
+                </a>
+
+                <a href="">
+                    <li>Projetos</li>
+                </a>
+
+                <a href="">
+                    <li>fim</li>
+                </a>
+            </ul>
+        </nav>
             </div>
          </div>
         </div>

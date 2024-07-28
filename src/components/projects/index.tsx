@@ -44,9 +44,9 @@ function Projects()
             
             <h3 className="text-2xl">PROJETOS</h3>
 
-            <div className="flex flex-col gap-5 mt-10">
+            <div className="w-full flex flex-col gap-5 mt-10">
                 {projects.map((itens, index) => (
-                    <animated.div style={{opacity: scrollXProgress}} key={index} className="w-[280px] bg-slate-100 p-4 rounded">
+                    <animated.div style={{opacity: scrollXProgress}} key={index} className="w-full bg-slate-100 p-4 rounded">
                         <div className="w-full flex flex-col items-center justify-center">
                         <h3 className="font-bold">{itens.title}</h3>
                         <p>{itens.description}</p>

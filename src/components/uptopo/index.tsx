@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
 function Uptopo() {
-  const [scrollPosition, setScrollPosition]: any = useState(0);
+ 
   const [visible, setVisible] = useState('hidden');
 
   const handleScroll = () => {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    setScrollPosition(scrollTop);
+ 
     if (scrollTop >= 200) {
       setVisible('flex');
     } else {

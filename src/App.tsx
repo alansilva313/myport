@@ -1,4 +1,5 @@
 import Aside from "./components/aside"
+import Footer from "./components/footer"
 import Header from "./components/header"
 import Projects from "./components/projects"
 
@@ -8,11 +9,16 @@ function App(){
 
   return (
     <>
-     <Header />
+   <div className="w-full">
+      <Header />
 
-     <Aside />
+    <Aside />
 
-     <Projects />
+    <Projects />
+
+
+    <Footer />
+   </div>
     </>
   )
 }

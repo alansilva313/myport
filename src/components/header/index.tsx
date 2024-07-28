@@ -5,7 +5,7 @@ function Header(){
     
     return (
         <>
-        <div className="fixed flex w-full p-4 lg:pl-36 lg:pr-36 items-center justify-between text-white">
+        <div className="fixed flex bg-slate-800 w-full p-4 lg:pl-36 lg:pr-36 items-center justify-between text-white">
          <div>
          <h3 className="lg:text-4xl">Dev Solutions</h3>
          </div>

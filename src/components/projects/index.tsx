@@ -61,7 +61,9 @@ function Projects()
                         <br />
                         <hr />
 
-                        <a href={itens.link} className="dark:text-white">Ver mais</a>
+                        <div className="w-full flex mt-10 items-center justify-center text-center">
+                        <a href={itens.link} className="dark:text-white w-full border flex items-center text-center justify-center p-2 rounded">Ver mais</a>
+                        </div>
                     </animated.div>    
                 ))
 

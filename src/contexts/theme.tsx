@@ -1,9 +1,21 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState, ReactNode } from 'react';
 
-export const ThemeContext: any = createContext({});
+interface ThemeContextType {
+  isDarkTheme: boolean;
+  toggleTheme: () => void;
+}
 
-function ThemeProvider({ children }: any) {
-  const [isDarkTheme, setIsDarkTheme] = useState(false); // Estado para controlar o tema
+export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+interface ThemeProviderProps {
+  children: ReactNode;
+}
+
+function ThemeProvider({ children }: ThemeProviderProps) {
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(() => {
+    const savedTheme = localStorage.getItem('isDarkTheme');
+    return savedTheme ? JSON.parse(savedTheme) : false;
+  });
 
   useEffect(() => {
     const html = document.documentElement;
@@ -14,6 +26,8 @@ function ThemeProvider({ children }: any) {
       html.classList.add('light');
       html.classList.remove('dark');
     }
+
+    localStorage.setItem('isDarkTheme', JSON.stringify(isDarkTheme));
   }, [isDarkTheme]);
 
   const toggleTheme = () => {

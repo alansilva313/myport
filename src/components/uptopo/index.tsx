@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import { IoIosArrowUp } from "react-icons/io";
 function Uptopo() {
  
   const [visible, setVisible] = useState('hidden');
@@ -29,7 +29,7 @@ function Uptopo() {
     <>
       <div className={`w-full ${visible} items-end justify-end fixed right-5 bottom-8`}>
         <div className="w-12 h-12 bg-white shadow-md flex items-center justify-center rounded-full cursor-pointer" onClick={scrollToTop}>
-          <p>UP</p>
+          <IoIosArrowUp className='text-2xl'/>
         </div>
       </div>
     </>

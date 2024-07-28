@@ -61,7 +61,7 @@ function Projects()
                         <br />
                         <hr />
 
-                        <a href={itens.link}>Ver mais</a>
+                        <a href={itens.link} className="dark:text-white">Ver mais</a>
                     </animated.div>    
                 ))
 

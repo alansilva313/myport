@@ -1,5 +1,5 @@
 
-
+import { MdMenu } from "react-icons/md";
 
 function Header(){
     
@@ -28,7 +28,7 @@ function Header(){
             </nav>
 
             <div className="flex sm:flex lg:hidden md:hidden">
-                <h3>menu</h3>
+            <MdMenu className="text-3xl cursor-pointer hover:text-slate-400"/>
             </div>
          </div>
         </div>

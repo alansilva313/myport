@@ -5,14 +5,14 @@ function Header(){
     
     return (
         <>
-        <div className="flex w-full p-4 lg:pl-20 lg:pr-20 items-center justify-between">
+        <div className="fixed flex w-full p-4 lg:pl-36 lg:pr-36 items-center justify-between text-white">
          <div>
-         <h3>Dev Solutions</h3>
+         <h3 className="lg:text-4xl">Dev Solutions</h3>
          </div>
 
          <div>
             <nav className="hidden lg:flex md:flex">
-                <ul className="flex flex-row items-center gap-4">
+                <ul className="flex flex-row items-center gap-4 text-2xl">
                     <a href="">
                         <li>Inicio</li>
                     </a>

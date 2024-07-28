@@ -2,7 +2,8 @@
 import { useContext } from "react";
 import { MdMenu } from "react-icons/md";
 import { ThemeContext } from "../../contexts/theme";
-
+import { CiSun } from "react-icons/ci";
+import { LuMoonStar } from "react-icons/lu";
 function Header(){
 
      const { isDarkTheme, toggleTheme }: any = useContext(ThemeContext);
@@ -35,7 +36,7 @@ function Header(){
             </nav>
 
             <div className="flex items-center gap-2 sm:flex lg:hidden md:hidden">
-             <p onClick={alterTheme}>{isDarkTheme === true ? "light" : "Dark"}</p>
+             <p onClick={alterTheme} className="text-[22px]">{isDarkTheme === true ? <CiSun className="text-[26px] text-orange-400"/>: <LuMoonStar className="text-blue-500"/>}</p>
             <MdMenu className="text-3xl cursor-pointer hover:text-slate-400"/>
             </div>
          </div>

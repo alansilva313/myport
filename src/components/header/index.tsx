@@ -1,5 +1,5 @@
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { MdMenu } from "react-icons/md";
 import { ThemeContext } from "../../contexts/theme";
 import { CiSun } from "react-icons/ci";
